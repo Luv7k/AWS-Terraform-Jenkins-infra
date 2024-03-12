@@ -14,14 +14,14 @@ module "security_group" {
   public_subnet_cidr_block   = tolist(module.networking.public_subnet_cidr_block)
   ec2_sg_name_for_python_api = "SG for EC2 for enabling port 5000"
 }
-/*
+
 module "ec2" {
   source                      = "./ec2"
   ami_id                      = var.ec2_ami_id
   instance_type               = "t2.micro"
   tag_name                    = "Ubuntu Linux EC2"
   public_key                  = var.public_key
-  subnet_id                   = tolist(module.networking.dev_proj_1_public_subnets)[0]
+  subnet_id                   = tolist(module.networking.dev_proj_2_public_subnets)[0]
   sg_enable_ssh_https         = module.security_group.sg_ec2_sg_ssh_http_id
   ec2_sg_name_for_python_api  = module.security_group.sg_ec2_for_python_api
   enable_public_ip_address    = true
@@ -34,9 +34,9 @@ module "lb_target_group" {
   lb_target_group_port     = 5000
   lb_target_group_protocol = "HTTP"
   vpc_id                   = module.networking.dev_proj_2_vpc_id
-  ec2_instance_id          = module.ec2.dev_proj_1_ec2_instance_id
+  ec2_instance_id          = module.ec2.dev_proj_2_ec2_instance_id
 }
-
+/*
 module "alb" {
   source                    = "./load-balancer"
   lb_name                   = "dev-proj-1-alb"
@@ -46,7 +46,7 @@ module "alb" {
   subnet_ids                = tolist(module.networking.dev_proj_1_public_subnets)
   tag_name                  = "dev-proj-1-alb"
   lb_target_group_arn       = module.lb_target_group.dev_proj_2_lb_target_group_arn
-  ec2_instance_id           = module.ec2.dev_proj_1_ec2_instance_id
+  ec2_instance_id           = module.ec2.dev_proj_2_ec2_instance_id
   lb_listner_port           = 5000
   lb_listner_protocol       = "HTTP"
   lb_listner_default_action = "forward"
