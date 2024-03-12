@@ -1,0 +1,1 @@
+In this repository, we are going to setup the infrastructure required for the AWS-Terraform-Jenkins Project.
