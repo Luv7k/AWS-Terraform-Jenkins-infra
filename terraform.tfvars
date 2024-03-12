@@ -3,7 +3,7 @@ name        = "environment"
 environment = "dev-1"
 
 vpc_cidr             = "10.0.0.0/16"
-vpc_name             = "dev-proj-infra-us-east-vpc-1"
+vpc_name             = "dev-proj-2-us-east-vpc-1"
 public_subnet_cidr   = ["10.0.1.0/24", "10.0.2.0/24"]
 private_subnet_cidr  = ["10.0.3.0/24", "10.0.4.0/24"]
 us_availability_zone = ["us-east-1a", "us-east-1b"]

@@ -6,15 +6,15 @@ module "networking" {
   private_subnet_cidr  = var.private_subnet_cidr
   us_availability_zone = var.us_availability_zone
 }
-/*
+
 module "security_group" {
   source                     = "./security-groups"
   ec2_sg_name                = "SG for EC2 to enable SSH(22) and HTTP(80)"
-  vpc_id                     = module.networking.dev_proj_infra_vpc_id
+  vpc_id                     = module.networking.dev_proj_2_vpc_id
   public_subnet_cidr_block   = tolist(module.networking.public_subnet_cidr_block)
   ec2_sg_name_for_python_api = "SG for EC2 for enabling port 5000"
 }
-
+/*
 module "ec2" {
   source                      = "./ec2"
   ami_id                      = var.ec2_ami_id
@@ -33,7 +33,7 @@ module "lb_target_group" {
   lb_target_group_name     = "dev-proj-1-lb-target-group"
   lb_target_group_port     = 5000
   lb_target_group_protocol = "HTTP"
-  vpc_id                   = module.networking.dev_proj_infra_vpc_id
+  vpc_id                   = module.networking.dev_proj_2_vpc_id
   ec2_instance_id          = module.ec2.dev_proj_1_ec2_instance_id
 }
 
