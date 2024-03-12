@@ -68,10 +68,10 @@ module "aws_ceritification_manager" {
   domain_name    = var.domain_name
   hosted_zone_id = module.hosted_zone.hosted_zone_id
 }
-/*
+
 module "rds_db_instance" {
   source               = "./rds"
-  db_subnet_group_name = "dev_proj_1_rds_subnet_group"
+  db_subnet_group_name = "dev_proj_2_rds_subnet_group"
   subnet_groups        = tolist(module.networking.dev_proj_2_public_subnets)
   rds_mysql_sg_id      = module.security_group.rds_mysql_sg_id
   mysql_db_identifier  = "mydb"
@@ -79,4 +79,3 @@ module "rds_db_instance" {
   mysql_password       = "dbpassword"
   mysql_dbname         = "devprojdb"
 }
-*/
