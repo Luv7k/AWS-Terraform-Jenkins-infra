@@ -1,6 +1,6 @@
 # AWS Terraform Jenkins Infrastructure
 
-This repository is part of the AWS-Terraform-Jenkins-Project and is responsible for configuring MySQL RDS for the application's data storage, providing a scalable and managed database solution.
+This repository is part of the **FlaskOps: Cloud Infrastructure Automation** and is responsible for configuring MySQL RDS for the application's data storage, providing a scalable and managed database solution.
 
 ## Project Overview
 
@@ -10,11 +10,10 @@ The AWS-Terraform-Jenkins-Project aims to demonstrate a robust deployment pipeli
 
 **Jenkins Subdomain:** Access Jenkins securely at https://jenkins.loveshbishnoi.de for CI/CD management.
 
-## Repositories
+## Related Project Repositories
 
 - [terraform-jenkins-setup](https://github.com/Luv7k/terraform-jenkins-setup): Repository for Jenkins Setup
 - [python-mysql-db-flaskapp](https://github.com/Luv7k/python-mysql-db-flaskapp): Repository for Flask App Deployment
-- [aws-terraform-jenkins-infra](https://github.com/Luv7k/aws-terraform-jenkins-infra.git): Repository for Database and Infra Configuration
 
 ## Usage
 
@@ -27,3 +26,9 @@ Follow these steps to configure MySQL RDS:
 
 ## Region
 MySQL RDS will be provisioned in the `us-east-2` region.
+
+## Project Conclusion
+By following the setup instructions provided in each repository, you'll be able to deploy a fully functional Python Flask application on AWS using Jenkins, Terraform, and MySQL RDS. For further assistance or inquiries, please feel free to reach out.
+
+## Disclaimer
+This project is for educational purposes and should be adapted according to your specific requirements and best practices.
